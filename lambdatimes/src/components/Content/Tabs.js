@@ -16,7 +16,7 @@ const Tabs = props => {
               selectTabHandler={props.selectTabHandler}
               selectedTab={props.selectedTab}
               tab={tab}
-              key={Math.floor(Math.random() * 10 + 1)}
+              key={Math.floor(Math.random() * 1000)}
             />
           );
         })}
@@ -26,7 +26,8 @@ const Tabs = props => {
 };
 
 Tabs.propTypes = {
-  tabData: PropTypes.arrayOf(PropTypes.string.isRequired)
+  tabData: PropTypes.arrayOf(PropTypes.string.isRequired),
+  selectedTab: PropTypes.func
 };
 
 // Make sure to use PropTypes to validate your types!
